@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="static/CSS/style.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <img src="static/Img/Logo_e_tipo.png" alt="">
+    <h1>CATÁLOGO ATACADO
+        2025</h1>
+
+    <h3>Jv Cactos e Suculentos</h3>
+  </header>
+  <main>
+    <ul>
+      {% for Planta in Plantas%}
+        <div class="produto">
+          <!-- {{ Planta.Nome }}, {{ Planta.Img }}, {{ Planta.Desc }}, {{ Planta.Valor }} -->
+          <form action="/update/{{Planta.id}}" method="post">
+            <div class="img">
+              <!-- <form action="/delete/{{Planta.id}}" method="post">
+                <button type="submit">X</button>
+              </form> -->
+              <img src="static/{{ Planta.Img }}" alt="Imagem do Produto"/>
+              <h2>{{ Planta.Nome }}</h2>
+            </div>
+            <div class="text">
+              <!-- <input type="text" name="Nome" value="{{ Planta.Nome }}" required>
+              <input type="text" name="Desc" value="{{ Planta.Desc }}" required>
+              <input type="text" name="Valor" value="{{ Planta.Valor }}" required> -->
+              <h3>{{ Planta.Desc }}</h3>
+              <h3>{{ Planta.Valor }}</h3>
+              <!-- <button type="submit">Update</button> -->
+            </div>
+          </form>
+        </div>
+      {%endfor%}
+    </ul>
+  </main>
+  <footer>
+    <img src="static/Img/Logotipo.png" alt="">
+    <p>(00) tele</p>
+    <p>@email</p>
+    <p>www.site.com.br</p>
+    <p>Estado/UF</p>
+  </footer>
+</body>
+</html>

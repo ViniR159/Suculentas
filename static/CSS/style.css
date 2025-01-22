@@ -1,0 +1,147 @@
+body {
+    scroll-padding-top: 50em;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    background-color: #263530;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header { 
+    margin-top: 2em;
+    margin-bottom: 5em;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+header h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+form {
+    margin-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+form input, form button {
+    padding: 0.8em;
+    font-size: 1rem;
+    border: 1px solid #C78447;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    background-color: #C78447;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #A46639;
+}
+
+form div{
+    width: 100%;
+}
+
+ul {
+    width: 100%;
+    display: inline-flex;
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    margin: 3em;
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.produto .img h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.produto .text {
+    padding-top: 1em;
+    border-top: 1px solid #C78447;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #C78447;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.produto .edit {
+    padding-top: 1em;
+    border-top: 1px solid #C78447;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #C78447;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.produto .text h3 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+footer {
+    margin-bottom: 5em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+footer img {
+    width: 150px;
+}
+
+footer p {
+    font-size: 1.5em;
+}
