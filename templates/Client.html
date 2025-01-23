@@ -11,7 +11,6 @@
     <img src="static/Img/Logo_e_tipo.png" alt="">
     <h1>CATÁLOGO ATACADO
         2025</h1>
-
     <h3>Jv Cactos e Suculentos</h3>
   </header>
   <main>
@@ -28,12 +27,10 @@
               <h2>{{ Planta.Nome }}</h2>
             </div>
             <div class="text">
-              <!-- <input type="text" name="Nome" value="{{ Planta.Nome }}" required>
-              <input type="text" name="Desc" value="{{ Planta.Desc }}" required>
-              <input type="text" name="Valor" value="{{ Planta.Valor }}" required> -->
               <h3>{{ Planta.Desc }}</h3>
-              <h3>{{ Planta.Valor }}</h3>
-              <!-- <button type="submit">Update</button> -->
+              <h3>Quantidade: {{ Planta.Quant }}</h3>
+              <h3>R$ {{ Planta.Valor }}</h3>
+              <button>Compra</button>
             </div>
           </form>
         </div>
@@ -46,6 +43,14 @@
     <p>@email</p>
     <p>www.site.com.br</p>
     <p>Estado/UF</p>
+    <button popovertarget="login">Adm</button>
+    <div popover id="login">
+      <form action="/Login" method="POST">
+        <input type="User" name="User" value="{{ User }}" placeholder="Usuario" required>
+        <input type="Senha" name="Senha" value="{{ Senha }}" placeholder="Senha" required>
+        <button type="submit"></button>
+      </form>
+    </div>
   </footer>
 </body>
 </html>

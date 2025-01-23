@@ -81,6 +81,30 @@ ul {
     justify-content: space-around;
 }
 
+.criar {
+    background-color: #263530;
+    padding: 2em;
+    text-align: center;
+    width: 30%;
+    color: white;
+    border: 2px solid #C78447;
+    border-radius: 60px;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.deletar {
+    background-color: #263530;
+    padding: 2em;
+    text-align: center;
+    width: 30%;
+    color: white;
+    border: 2px solid #C78447;
+    border-radius: 60px;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
 .produto {
     margin: 3em;
     width: 30%;
@@ -113,6 +137,9 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
 .produto .edit {

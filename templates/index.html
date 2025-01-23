@@ -8,26 +8,33 @@
 </head>
 <body>
   <header>
-    <a href="Client.html"><button style="width: 5em; position: fixed;">Voltar para pagina Client</button></a>
     <img src="static/Img/Logo_e_tipo.png" alt="">
     <h1>CATÁLOGO ATACADO
         2025</h1>
     <h3>Jv Cactos e Suculentos</h3>
   </header>
   <main>
+    <button popovertarget="criar" style="height: 10em; width: 10em;">+</button>
     <form action="/criar" method="POST" enctype="multipart/form-data">
-        <input type="text" name="Nome" placeholder="Nome" required>
-        <input type="file" name="Img" required>
-        <input type="text" name="Desc" placeholder="Descrição" required>
-        <input type="text" name="Valor" placeholder="Preço" required>
+      <div popover id="criar" class="criar">
+        <input type="file" name="Img" required style="width: 70%; height: 10em; background-color: #ffff;">
+        <input type="text" name="Nome" placeholder="Nome" required style="width: 70%;">
+        <input type="text" name="Desc" placeholder="Descrição" required style="width: 70%;">
+        <input type="text" name="Quant" placeholder="Quantidade" required style="width: 70%;">
+        <input type="text" name="Valor" placeholder="Preço" required style="width: 70%;">
         <button type="submit">adicionar</button>
-      </form>
+      </div>
+    </form>
     <ul>
       {% for Planta in Plantas%}
         <div class="produto">
-            <form action="/delete/{{ Planta.id }}" method="POST">
-              <button style="position: absolute;" type="submit">X</button>
-            </form>
+            <button popovertarget="delete">x</button>
+            <div popover id="delete" class="deletar" style="background-color: #ffff;">
+              <form action="/delete/{{ Planta.id }}" method="POST">
+                <h1>Deseja realmente deletar?</h1>
+                <button style="position: relative;" type="submit" style="height: 20em;" >Sim</button>
+              </form>
+            </div>
             <!-- {{ Planta.Nome }}, {{ Planta.Img }}, {{ Planta.Desc }}, {{ Planta.Valor }} -->
             <form action="/update/{{Planta.id}}" method="post" enctype="multipart/form-data">
               <div class="img">
@@ -38,6 +45,7 @@
               <div class="edit">
                   <input type="text" name="Nome" value="{{ Planta.Nome }}" required>
                   <input type="text" name="Desc" value="{{ Planta.Desc }}" required>
+                  <input type="text" name="Quant" value="{{ Planta.Quant }}" required>
                   <input type="text" name="Valor" value="{{ Planta.Valor }}" required> 
                   <button type="submit">Update</button>
               </div>
@@ -52,6 +60,7 @@
     <p>@email</p>
     <p>www.site.com.br</p>
     <p>Estado/UF</p>
+    <a href="Client.html"><button style="width: 5em;">Voltar para pagina Client</button></a>
   </footer>
 </body>
 </html>
